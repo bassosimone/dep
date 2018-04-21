@@ -46,7 +46,7 @@ if(${MK_DEPS_ENABLE_GEOIP})
   )
 endif()
 
-set(MK_DEPS_ENABLE_CARES OFF CACHE STRING "Whethere to build c-ares")
+set(MK_DEPS_ENABLE_CARES ON CACHE STRING "Whethere to build c-ares")
 if(${MK_DEPS_ENABLE_CARES})
   externalproject_add(
     ext_cares
