@@ -44,23 +44,6 @@ if(${MK_DEPS_ENABLE_GEOIP})
                "-DCMAKE_C_FLAGS_DEBUG=${CMAKE_C_FLAGS_DEBUG}"
     DEPENDS ext_geoip
   )
-# execute_process(
-#   COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}"
-#     "${CMAKE_BINARY_DIR}/ext_geoip-prefix/src/ext_geoip"
-#   RESULT_VARIABLE result
-#   WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/ext_geoip-prefix/src/ext_geoip-build"
-# )
-# if(result)
-#   message(FATAL_ERROR "Configure step for geoip failed: ${result}")
-# endif()
-# execute_process(
-#   COMMAND ${CMAKE_COMMAND} --build .
-#   RESULT_VARIABLE result
-#   WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/ext_geoip-prefix/src/ext_geoip-build"
-# )
-# if(result)
-#   message(FATAL_ERROR "Build step for geoip failed: ${result}")
-# endif()
 endif()
 
 set(MK_DEPS_ENABLE_CARES OFF CACHE STRING "Whethere to build c-ares")
